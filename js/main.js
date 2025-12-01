@@ -8,10 +8,20 @@ menuBtn.addEventListener("click", () => {
 const swiper = new Swiper(".projects__slider", {
   // Optional parameters
   loop: true,
+  slidesPerView: 1,
+  spaceBetween: 20,
 
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
   // Navigation arrows
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".projects__arrow-next",
+    prevEl: ".projects__arrow-prev",
   },
 });
